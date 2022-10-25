@@ -1,5 +1,16 @@
 @include aoa-bg-series($img__classes,$img__aoa,0,"center","cover","scroll");
-
+@media all and (max-width:991px), all and (orientation:portrait){
+    @include aoa-bg-series($img__classes--v,$img__aoa--v,0,"center","cover","scroll");
+}
+*{
+    font-family: "RussoOne";
+}
+.box{    
+    background-image: linear-gradient(#055160,black);
+    border: 1px solid #277281;
+    border-radius: 20px;
+    opacity: 0.9;
+}
 .privacy{
     &-s1{
         background-position-x: right!important;
@@ -10,10 +21,18 @@
         height: $logo__height;
     }
 }
+.opacity{
+    &-8{
+        opacity:0.8;
+    }
+}
 .text{
     &-shadow{
         text-shadow: $text__shadow;
     }
+}
+h1,h2,h3,h4,h5,h6,.nav-link,th{
+    letter-spacing: 2px;
 }
 header{
     z-index: 10;
@@ -25,8 +44,8 @@ textarea{
     .navbar{
         &-nav{
             backdrop-filter: blur(5px); 
-            background-color: #fff;
-            border: 1px solid #999;
+            background-image: linear-gradient(#055160,black);
+            border: 1px solid #277281;
             opacity: 0.9;
             padding: 10px;
         }
